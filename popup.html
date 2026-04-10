@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SoundScape</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">⏳</div>
+      <span class="logo-text">SoundScape</span>
+    </div>
+    <div class="status-dot" id="dot"></div>
+  </div>
+
+  <div class="vis-wrap">
+    <canvas id="vis"></canvas>
+  </div>
+
+  <div class="now">
+    <div class="now-icon" id="npIcon">☁️</div>
+    <div class="now-info">
+      <div class="now-label">Now Playing</div>
+      <div class="now-name" id="npName">Calm</div>
+      <div class="now-sub"  id="npSub">Click ▶ to begin</div>
+    </div>
+    <button class="play-btn" id="playBtn">▶</button>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-row">
+      <span class="ctrl-lbl">Volume</span>
+      <input type="range" id="vol" min="0" max="100" value="60">
+      <span class="ctrl-val" id="volVal">60%</span>
+    </div>
+    <div class="ctrl-row">
+      <span class="ctrl-lbl">Intensity</span>
+      <input type="range" id="intensity" min="10" max="100" value="70" step="5">
+      <span class="ctrl-val" id="intVal">70%</span>
+    </div>
+  </div>
+
+  <div class="cats">
+    <div class="cats-label">Soundscape</div>
+    <div class="cat-grid">
+      <button class="cat-btn auto active" data-cat="auto"><span class="ico">🔮</span> Auto-detect</button>
+      <button class="cat-btn" data-cat="nature">  <span class="ico">🌿</span> Nature</button>
+      <button class="cat-btn" data-cat="tech">    <span class="ico">⚡</span> Tech</button>
+      <button class="cat-btn" data-cat="space">   <span class="ico">🌌</span> Space</button>
+      <button class="cat-btn" data-cat="news">    <span class="ico">📡</span> News</button>
+      <button class="cat-btn" data-cat="commerce"><span class="ico">🛍️</span> Commerce</button>
+      <button class="cat-btn" data-cat="calm">    <span class="ico">☁️</span> Calm</button>
+      <button class="cat-btn" data-cat="focus">   <span class="ico">🎯</span> Focus</button>
+      <button class="cat-btn" data-cat="rain">    <span class="ico">🌧️</span> Rain</button>
+      <button class="cat-btn" data-cat="cafe">    <span class="ico">☕</span> Cafe</button>
+    </div>
+  </div>
+
+  <div id="unavailable" class="unavailable" style="display:none">
+    <span>Not available on this page</span>
+  </div>
+
+  <div class="footer">Click Play, then browse freely — soundscape shifts with the page. <span class="kbd">Alt+S</span> to toggle.</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

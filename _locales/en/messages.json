@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "SoundScape",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Procedural ambient audio for every webpage. Your browsing, scored.",
+    "description": "Extension description"
+  }
+}

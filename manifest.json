@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "SoundScape",
+  "version": "1.0.0",
+  "description": "Procedural ambient audio for every webpage. Your browsing, scored.",
+  "default_locale": "en",
+
+  "icons": {
+    "48":  "images/icon-48.svg",
+    "96":  "images/icon-96.svg"
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48":  "images/icon-48.svg",
+      "96":  "images/icon-96.svg"
+    },
+    "default_title": "SoundScape"
+  },
+
+  "background": {
+    "scripts": ["sound-recipes.js", "background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content-analysis.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "<all_urls>"
+  ],
+
+  "commands": {
+    "toggle-play": {
+      "suggested_key": { "default": "Alt+S" },
+      "description": "Toggle SoundScape play/pause"
+    }
+  }
+}
