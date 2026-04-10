@@ -6,6 +6,8 @@ SoundScape is a Firefox extension that listens to where you are on the web and p
 
 Everything is synthesized in real time using the Web Audio API. No samples, no streaming, no accounts — just sound that fits the moment.
 
+Demo Video: https://youtu.be/DsJcRfUQ_II
+
 ---
 
 ## Features
