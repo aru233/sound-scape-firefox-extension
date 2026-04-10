@@ -77,17 +77,11 @@ The `AudioContext` lives in the **persistent background page** (`manifest_versio
 
 ## Installation
 
-### Temporary (development)
-
 1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on**
 3. Select `manifest.json` from this directory
 
 The extension reloads automatically — no browser restart needed.
-
-### Permanent
-
-Submit to [addons.mozilla.org](https://addons.mozilla.org) or install a signed `.xpi` via `about:addons`.
 
 ---
 
@@ -140,6 +134,3 @@ images/                SVG extension icons (48px, 96px)
 - **Waveform visualizer**: `AnalyserNode` → `getByteTimeDomainData` → canvas, polled at ~20 fps via `requestAnimationFrame` with 50 ms timestamp gating
 
 ---
-
-## License
-
